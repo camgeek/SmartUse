@@ -17,10 +17,14 @@ The token labeled <span style="color:blue">*access_token*</span>, obtained by th
 ### Create a bucket
 
 ```
-curl -v 'https://developer.api.autodesk.com/oss/v2/buckets' -X 'POST' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${access_token}' -d '{"bucketKey":"${bucket_name}","policyKey":"transient"}'
+curl -v 'https://developer.api.autodesk.com/oss/v2/buckets' -X 'POST' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${access_token}' -d '{"bucketKey":"${bucket_name}","policyKey":"${policy_key}"}'
 ```
 
-Here, we’re creating a <span style="color:green">transient</span> bucket, meaning that anything uploaded to it will be deleted after 24 hours.
+We can have three policies keys different:
+
+* transient : objects older than 24 hours are removed automatically.
+* temporary : when an object has reached 30 days of age, it is deleted.
+* persistent : when a file is uploaded, the owner should expect this item to be available for as long as the owner account is active, or until he or she deletes the item.
 
 ### Check bucket creation
 
