@@ -7,7 +7,7 @@
 ### Obtain an Access Token
 
 ```
-curl -X POST -k -H 'Content-Type: application/x-www-form-urlencoded' -i 'https://developer.api.autodesk.com/authentication/v1/authenticate' --data 'client_id=ladX0zmGPFmY2rmlfI5zaB2XJaaOZ2lT&client_secret=k436qC5AwnvPnqWP&grant_type=client_credentials&scope=bucket:create bucket:read data:read data:write' 
+curl -X POST -k -H 'Content-Type: application/x-www-form-urlencoded' -i 'https://developer.api.autodesk.com/authentication/v1/authenticate' --data 'client_id=95XcJdJzsD9i7IodzhL5C9TkYLhklKyn&client_secret=rDpDG3sgs3FGz1Ej&grant_type=client_credentials&scope=bucket:create bucket:read data:read data:write' 
 ``` 
 
 The token labeled <span style="color:blue">*access_token*</span>, obtained by this command, will be used in the next steps.
